@@ -34,34 +34,43 @@
   "engines": {
     "vscode": "^1.52.0"
   },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
   "activationEvents": [
-    "onCommand:extension.codeStorm.revealInSideBar"
+    "*"
   ],
   "contributes": {
     "configuration": {
-      "title": "CodeStorm configuration",
+      "title": "CodeStorm",
       "properties": {
         "codeStorm.revealInSideBarButton.show": {
           "type": "boolean",
           "default": true,
           "description": "Show the Reveal in Side Bar button in the editor menu"
+        },
+        "codeStorm.autoInsertClosingXmlHtmlTag.enabled": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Enable insert closing tag on XML/HTML tag completion in file types other than  `*.xml|html` (_VSCode auto inserts closing tags in these files by default_)"
         }
       }
     },
     "commands": [
       {
-        "command": "extension.codeStorm.revealInSideBar",
+        "command": "workbench.files.action.showActiveFileInExplorer",
         "title": "Reveal in Side Bar",
         "icon": {
-          "dark": "./icons/target-dark.svg",
-          "light": "./icons/target-light.svg"
+          "dark": "./src/features/reveal-in-side-bar-button/target-dark.svg",
+          "light": "./src/features/reveal-in-side-bar-button/target-light.svg"
         }
       }
     ],
     "menus": {
       "editor/title": [
         {
-          "command": "extension.codeStorm.revealInSideBar",
+          "command": "workbench.files.action.showActiveFileInExplorer",
           "group": "navigation@100",
           "when": "config.codeStorm.revealInSideBarButton.show"
         }
