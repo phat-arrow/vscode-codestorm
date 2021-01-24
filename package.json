@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phat-arrow/vscode-codestorm.git"
+    "url": "https://github.com/phat-arrow/vscode-codestorm"
   },
   "keywords": [
     "vscode",

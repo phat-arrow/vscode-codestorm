@@ -12,8 +12,8 @@ Bring several productivity features of <a href="https://www.jetbrains.com/websto
 Settings can be found by searching for the term __codestorm__ in the VSCode settings GUI.
 
 * Reveal in side bar button
-  * __show__: Whether to show or hide the editor menu button (target icon)
+  * __show__: Whether to show or hide the editor menu button (target icon)\
   `"codeStorm.revealInSideBarButton.show": true`
 * Auto insert closing XML/HTML tags
-  * __enabled__: Enables/disables auto inserting closing tag on XML/HTML tag completion in file types other than `*.xml|html`
+  * __enabled__: Enables/disables auto inserting closing tag on XML/HTML tag completion in file types other than `*.xml|html` (_VSCode auto inserts closing tags in these files by default_)\
   `"codeStorm.autoInsertClosingXmlHtmlTag.enabled": true`
