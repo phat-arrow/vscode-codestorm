@@ -1,7 +1,7 @@
 {
   "name": "vscode-codestorm",
   "displayName": "CodeStorm",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "VSCode extension that replicates several productivity features of WebStorm",
   "main": "./out/extension.js",
   "scripts": {
