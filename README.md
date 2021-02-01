@@ -1,12 +1,15 @@
 # CodeStorm
 Bring several productivity features of <a href="https://www.jetbrains.com/webstorm/">WebStorm</a> into VSCode.
 
+![version](https://img.shields.io/github/package-json/v/phat-arrow/vscode-codestorm)
+
 ## Features
 
 * Editor title menu button for "Reveal in Side Bar" navigation (similar to Select Open File)
   > _Implementation inspired by <a href="https://github.com/smulyono/reveal-file-ext">https://github.com/smulyono/reveal-file-ext</a>_
 * Auto insert closing XML/HTML tags in file types other than `*.xml|html`
   > _Implementation inspired by <a href="https://github.com/formulahendry/vscode-auto-close-tag">https://github.com/formulahendry/vscode-auto-close-tag</a>_
+* Terminals tree view for the Activity Bar to provide GUI for editing terminal names and switching between terminals
 
 ## Extension Settings
 Settings can be found by searching for the term __codestorm__ in the VSCode settings GUI.
