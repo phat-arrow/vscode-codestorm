@@ -1,7 +1,7 @@
 {
   "name": "vscode-codestorm",
   "displayName": "CodeStorm",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "VSCode extension that replicates several productivity features of WebStorm",
   "main": "./out/extension.js",
   "scripts": {
@@ -57,6 +57,31 @@
         }
       }
     },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "list-terminals",
+          "title": "Terminals",
+          "icon": "./src/features/terminal-tree/activity-bar-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "list-terminals": [
+        {
+          "id": "terminalsView",
+          "name": "Terminals",
+          "icon": "./src/features/terminal-tree/activity-bar-icon.svg",
+          "contextualTitle": "Active Terminals"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "terminalsView",
+        "contents": "No terminals open.\n[Open a terminal](command:workbench.action.terminal.new)"
+      }
+    ],
     "commands": [
       {
         "command": "workbench.files.action.showActiveFileInExplorer",
@@ -64,6 +89,22 @@
         "icon": {
           "dark": "./src/features/reveal-in-side-bar-button/target-dark.svg",
           "light": "./src/features/reveal-in-side-bar-button/target-light.svg"
+        }
+      },
+      {
+        "command": "codeStorm.terminals.renameTerminal",
+        "title": "Rename",
+        "icon": {
+          "light": "./src/features/terminal-tree/rename-light.svg",
+          "dark": "./src/features/terminal-tree/rename-dark.svg"
+        }
+      },
+      {
+        "command": "codeStorm.terminals.focusTerminal",
+        "title": "Focus terminal",
+        "icon": {
+          "light": "./src/features/terminal-tree/focus-light.svg",
+          "dark": "./src/features/terminal-tree/focus-dark.svg"
         }
       }
     ],
@@ -73,6 +114,18 @@
           "command": "workbench.files.action.showActiveFileInExplorer",
           "group": "navigation@100",
           "when": "config.codeStorm.revealInSideBarButton.show"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "codeStorm.terminals.renameTerminal",
+          "when": "view == terminalsView",
+          "group": "inline@1"
+        },
+        {
+          "command": "codeStorm.terminals.focusTerminal",
+          "when": "view == terminalsView",
+          "group": "inline@2"
         }
       ]
     }
